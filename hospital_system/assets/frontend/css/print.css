@@ -1,0 +1,10 @@
+/* Print styles (receipt): flip to black on white and drop the chrome */
+@media print {
+    .topbar, .tabbar, .toasts, .no-print, .page-head .page-actions { display: none !important; }
+    :root, :root[data-theme] { --bg: #fff; --surface: #fff; --text: #111; --muted: #444; --faint: #666; --border: #ccc; --border-strong: #999; }
+    body { background: #fff; color: #111; }
+    .page { padding: 0; }
+    .ticket { border: 1px solid #999; max-width: none; }
+    .ticket-tear::before, .ticket-tear::after { background: #fff; }
+    .badge { border: 1px solid #999; background: #fff; color: #111; }
+}

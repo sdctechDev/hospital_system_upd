@@ -1,0 +1,100 @@
+/* ==========================================================================
+   Design tokens. Change colours, fonts and spacing here to restyle the site.
+   Source of truth: DESIGN.md (obsidian base, indigo accent, 8px grid).
+   ========================================================================== */
+:root {
+    /* Surfaces */
+    --bg:            #0B0F19;
+    --surface:       #161B26;
+    --surface-2:     #1C2332;
+    --field:         #0F1420;
+    --border:        #242C3D;
+    --border-strong: #34405A;
+
+    /* Text */
+    --text:   #F9FAFB;
+    --muted:  #9CA3AF;
+    --faint:  #7B8497;
+
+    /* Accent: the one interactive colour */
+    --accent:       #6366F1;
+    --accent-hover: #7A7DF5;
+    --accent-soft:  rgba(99, 102, 241, .14);
+    --accent-line:  rgba(99, 102, 241, .55);
+
+    /* Signature: used only for the hand-drawn ring and "today" markers */
+    --lime: #D8F264;
+
+    /* Status colours (functional, not decorative) */
+    --warn:   #F5B544;  --warn-soft:   rgba(245, 181,  68, .12);
+    --ok:     #34D399;  --ok-soft:     rgba( 52, 211, 153, .12);
+    --info:   #60A5FA;  --info-soft:   rgba( 96, 165, 250, .12);
+    --bad:    #F87171;  --bad-soft:    rgba(248, 113, 113, .12);
+    --refund: #A5B4FC;  --refund-soft: rgba(165, 180, 252, .12);
+
+    /* 8px spacing grid */
+    --s1: 8px;  --s2: 16px; --s3: 24px; --s4: 32px;
+    --s5: 40px; --s6: 48px; --s8: 64px; --s10: 80px;
+
+    /* Radii: controls < panels < pills */
+    --r-ctl:   12px;
+    --r-panel: 20px;
+    --r-pill:  999px;
+
+    /* Chrome sizes */
+    --nav-h: 64px;
+    --tab-h: 68px;
+
+    /* Type */
+    --font-display: "Red Hat Display", "Geist", system-ui, sans-serif;
+    --font-ui:      "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-body:    "Inter", "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+    /* Motion */
+    --ease: cubic-bezier(.4, 0, .2, 1);
+    --t: .3s;
+
+    /* Legacy aliases so old CSS or templates keep working */
+    --primary: var(--accent);
+    --primary-dark: var(--accent-hover);
+    --card: var(--surface);
+    --danger: var(--bad);
+    --success: var(--ok);
+    --warning: var(--warn);
+    --font: var(--font-ui);
+
+    /* Theme helpers (overridden in light mode below) */
+    --on-soft: #FFFFFF;          /* text on accent-soft backgrounds */
+    --on-soft-2: #C7C8FB;
+    --glass: rgba(22, 27, 38, .82);
+    --dot: rgba(255, 255, 255, .05);
+    --scrim: rgba(5, 8, 14, .7);
+    --alert-bad: #FCA5A5; --alert-ok: #6EE7B7; --alert-info: #93C5FD;
+
+    color-scheme: dark;
+}
+
+/* ---------- Light theme: toggled with the button in the nav ---------- */
+:root[data-theme="light"] {
+    --bg: #F4F5FA;  --surface: #FFFFFF;  --surface-2: #EEF0F7;  --field: #F7F8FC;
+    --border: #E2E5EF;  --border-strong: #C9CEDD;
+    --text: #0B0F19;  --muted: #55607A;  --faint: #6B7590;
+
+    --accent: #4F46E5;  --accent-hover: #4338CA;
+    --accent-soft: rgba(79, 70, 229, .10);  --accent-line: rgba(79, 70, 229, .45);
+    --lime: #8CA80A;
+
+    --warn: #B45309;   --warn-soft: rgba(217, 119, 6, .12);
+    --ok: #047857;     --ok-soft: rgba(5, 150, 105, .12);
+    --info: #1D4ED8;   --info-soft: rgba(37, 99, 235, .10);
+    --bad: #DC2626;    --bad-soft: rgba(220, 38, 38, .09);
+    --refund: #6D5BD0; --refund-soft: rgba(109, 91, 208, .12);
+
+    --on-soft: #312E81;  --on-soft-2: #4F46E5;
+    --glass: rgba(255, 255, 255, .82);
+    --dot: rgba(11, 15, 25, .06);
+    --scrim: rgba(11, 15, 25, .45);
+    --alert-bad: #B91C1C; --alert-ok: #047857; --alert-info: #1D4ED8;
+
+    color-scheme: light;
+}
